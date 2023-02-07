@@ -12,23 +12,73 @@
   </head>
   <body class="page">
     <section class="main">
-      <section class="header margin-section_botton">
+      <section class="header margin-section_botton-40">
         <img class="header__logo" src="./images/logo.svg" alt="логотип" />
       </section>
-      <section class="profile">
+      <section class="profile margin-section_botton-47">
         <div class="profile__info">
-          <div class="profile__image"></div>
+          <div class="profile__image" aria-label="фото пользователя"></div>
           <div class="profile__info-label">
             <h1 class="profile__label-name">Имя</h1>
             <h2 class="profile__label-profession">Профессия</h2>
           </div>
-          <div class="profile__button-edit"></div>
+          <div
+            class="profile__button-edit"
+            type="button"
+            aria-label="кнопка редактирования профиля"
+          ></div>
         </div>
-        <div class="profile__button-add"></div>
+        <div
+          class="profile__button-add"
+          type="button"
+          aria-label="кнопка добавления картинок"
+        ></div>
       </section>
-      <section class="element">
-        <div class="element__card"></div>
-      </section>
+      <ul class="element">
+        <li class="element__card">
+          <img class="element__card-image" src="./images/foto/holm.jpg" alt="фото холма">
+          <div class="element__card-info">
+            <p class="element__card-title">Холм</p>
+            <div class="element__card-button-like" type="button" aria-label="кнопка лайк"></div>
+          </div>
+        </li>
+        <li class="element__card">
+          <img class="element__card-image" src="./images/foto/lodka.jpg" alt="фото холма">
+          <div class="element__card-info">
+            <p class="element__card-title">Лодка</p>
+            <div class="element__card-button-like" type="button" aria-label="кнопка лайк"></div>
+          </div>
+        </li>
+        <li class="element__card">
+          <img class="element__card-image" src="./images/foto/novaya-zelandiya.jpg" alt="фото холма">
+          <div class="element__card-info">
+            <p class="element__card-title">Новая Зеландия</p>
+            <div class="element__card-button-like" type="button" aria-label="кнопка лайк"></div>
+          </div>
+        </li>
+        <li class="element__card">
+          <img class="element__card-image" src="./images/foto/ozeroj.jpg" alt="фото холма">
+          <div class="element__card-info">
+            <p class="element__card-title">Озеро</p>
+            <div class="element__card-button-like" type="button" aria-label="кнопка лайк"></div>
+          </div>
+        </li>
+        <li class="element__card">
+          <img class="element__card-image" src="./images/foto/pole.jpg" alt="фото холма">
+          <div class="element__card-info">
+            <p class="element__card-title">Поле</p>
+            <div class="element__card-button-like" type="button" aria-label="кнопка лайк"></div>
+          </div>
+        </li>
+        <li class="element__card">
+          <img class="element__card-image" src="./images/foto/seno.jpg" alt="фото холма">
+          <div class="element__card-info">
+            <p class="element__card-title">Сено</p>
+            <div class="element__card-button-like" type="button" aria-label="кнопка лайк"></div>
+          </div>
+        </li>
+      </ul>
+
       <section class="footer"></section>
     </section>
   </body>

@@ -1,0 +1,8 @@
+.element__card-button-like {
+  width: 22px;
+  height: 19px;
+  background-image: url(../../../images/hearts_white.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
