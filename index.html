@@ -37,7 +37,7 @@
         ></div>
       </section>
       <ul class="element margin-section_botton-67">
-        <li class="element__card">
+        <!-- <li class="element__card">
           <img
             class="element__card-image"
             src="./images/foto/holm.jpg"
@@ -126,13 +126,31 @@
               aria-label="кнопка лайк"
             ></div>
           </div>
-        </li>
+        </li> -->
       </ul>
 
       <section class="footer">
         <p class="footer__text">&copy;Mesto Russia</p>
       </section>
     </section>
+
+    <template id="card">
+      <li class="element__card">
+        <img
+          class="element__card-image"
+          src="./images/foto/holm.jpg"
+          alt="фото холма"
+        />
+        <div class="element__card-info">
+          <p class="element__card-title">Холм</p>
+          <div
+            class="element__card-button-like"
+            type="button"
+            aria-label="кнопка лайк"
+          ></div>
+        </div>
+      </li>
+    </template>
 
     <article class="popup popup_type_edit_profile">
       <form class="popup__form" action="">
@@ -147,10 +165,38 @@
           placeholder="professiln"
           type="text"
         />
-        <button class="popup__button-submit" type="submit">
+        <button
+          class="popup__button-submit popup_button-submit_type_edit-profile"
+          type="submit"
+        >
           Редактировать
         </button>
-        <div class="popup__button-exit"></div>
+        <div
+          class="popup__button-exit popup_button-exit_type_edit-profile"
+        ></div>
+      </form>
+    </article>
+
+    <article class="popup popup_type_add_card">
+      <form class="popup__form" action="">
+        <h2 class="popup__title">Новое место</h2>
+        <input
+          class="popup__input popup__input_type_name-card"
+          placeholder="Название"
+          type="text"
+        />
+        <input
+          class="popup__input popup__input_type_address-card"
+          placeholder="Ссылка на картинку"
+          type="text"
+        />
+        <button
+          class="popup__button-submit popup_button-submit_type_add-card"
+          type="submit"
+        >
+          Создать
+        </button>
+        <div class="popup__button-exit popup_button-exit_type_add-card"></div>
       </form>
     </article>
 
