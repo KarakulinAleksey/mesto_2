@@ -37,96 +37,7 @@
         ></div>
       </section>
       <ul class="element margin-section_botton-67">
-        <!-- <li class="element__card">
-          <img
-            class="element__card-image"
-            src="./images/foto/holm.jpg"
-            alt="фото холма"
-          />
-          <div class="element__card-info">
-            <p class="element__card-title">Холм</p>
-            <div
-              class="element__card-button-like"
-              type="button"
-              aria-label="кнопка лайк"
-            ></div>
-          </div>
-        </li>
-        <li class="element__card">
-          <img
-            class="element__card-image"
-            src="./images/foto/lodka.jpg"
-            alt="фото холма"
-          />
-          <div class="element__card-info">
-            <p class="element__card-title">Лодка</p>
-            <div
-              class="element__card-button-like"
-              type="button"
-              aria-label="кнопка лайк"
-            ></div>
-          </div>
-        </li>
-        <li class="element__card">
-          <img
-            class="element__card-image"
-            src="./images/foto/novaya-zelandiya.jpg"
-            alt="фото холма"
-          />
-          <div class="element__card-info">
-            <p class="element__card-title">Новая Зеландия</p>
-            <div
-              class="element__card-button-like"
-              type="button"
-              aria-label="кнопка лайк"
-            ></div>
-          </div>
-        </li>
-        <li class="element__card">
-          <img
-            class="element__card-image"
-            src="./images/foto/ozeroj.jpg"
-            alt="фото холма"
-          />
-          <div class="element__card-info">
-            <p class="element__card-title">Озеро</p>
-            <div
-              class="element__card-button-like"
-              type="button"
-              aria-label="кнопка лайк"
-            ></div>
-          </div>
-        </li>
-        <li class="element__card">
-          <img
-            class="element__card-image"
-            src="./images/foto/pole.jpg"
-            alt="фото холма"
-          />
-          <div class="element__card-info">
-            <p class="element__card-title">Поле</p>
-            <div
-              class="element__card-button-like"
-              type="button"
-              aria-label="кнопка лайк"
-            ></div>
-          </div>
-        </li>
-        <li class="element__card">
-          <img
-            class="element__card-image"
-            src="./images/foto/seno.jpg"
-            alt="фото холма"
-          />
-          <div class="element__card-info">
-            <p class="element__card-title">Сено</p>
-            <div
-              class="element__card-button-like"
-              type="button"
-              aria-label="кнопка лайк"
-            ></div>
-          </div>
-        </li> -->
+
       </ul>
 
       <section class="footer">
@@ -136,6 +47,11 @@
 
     <template id="card">
       <li class="element__card">
+        <img
+          class="element__card-button-delete"
+          src="./images/Vedro.svg"
+          alt="кнопка удаление карточки"
+        />
         <img
           class="element__card-image"
           src="./images/foto/holm.jpg"
@@ -198,6 +114,14 @@
         </button>
         <div class="popup__button-exit popup_button-exit_type_add-card"></div>
       </form>
+    </article>
+
+    <article class="popup popup_type_image">
+      <div class="popup__image-conteiner">
+        <div class="popup__button-exit popup_button-exit_type_image"></div>
+        <img class="popup__image" src="" alt="" srcset="">
+        <span class="popup__image-title"></span>
+      </div>
     </article>
 
     <script src="./components/index.js"></script>

@@ -44,6 +44,10 @@ const inputNameCardPopupAddCard = sectionPopupAddCard.querySelector('.popup__inp
 const inputAddressCardPopupAddCard = sectionPopupAddCard.querySelector('.popup__input_type_address-card');
 const buttonSubmitPopupAddCard = sectionPopupAddCard.querySelector('.popup_button-submit_type_add-card');
 const buttonExitPopupAddCard = sectionPopupAddCard.querySelector('.popup_button-exit_type_add-card');
+const sectionPopupImage = document.querySelector('.popup_type_image');
+const popupImageImageBlock = sectionPopupImage.querySelector('.popup__image');
+const popupImageTitle = sectionPopupImage.querySelector('.popup__image-title');
+const buttonExitPopupImage = sectionPopupImage.querySelector('.popup_button-exit_type_image');
 
 const cardTemplate = document.querySelector('#card').content;
 const elementCard = cardTemplate.querySelector('.element__card');
@@ -53,9 +57,28 @@ const createCard = (cardName, cardLink) => {
   const elementCard = cardTemplate.querySelector('.element__card').cloneNode(true);
   const elementCardImage = elementCard.querySelector('.element__card-image');
   const elementCardTitle = elementCard.querySelector('.element__card-title');
+  const elementCardButtonDeleteCard = elementCard.querySelector('.element__card-button-delete');
+  const elementCardButtonLike = elementCard.querySelector('.element__card-button-like');
   elementCardImage.src = cardLink;
   elementCardTitle.textContent = cardName;
+
+  elementCardButtonDeleteCard.addEventListener('click',() => {
+    const card = elementCardButtonDeleteCard.closest('.element__card');
+    card.remove();
+  })
+
+  elementCardImage.addEventListener('click', () => {
+    openPopup(sectionPopupImage);
+    popupImageImageBlock.src = elementCardImage.src;
+    popupImageTitle.textContent = elementCardTitle.textContent;
+  })
+
+  elementCardButtonLike.addEventListener('click', () => {
+    elementCardButtonLike.classList.toggle('element__card-button-like_color_black');
+  })
+
   return elementCard;
+
 }
 
 const renderCard = (conteainer, cardName, cardLink) => {
@@ -101,3 +124,5 @@ buttonSubmitPopupAddCard.addEventListener('click', (evt) => {
   renderCard(sectionElement, inputNameCardPopupAddCard.value, inputAddressCardPopupAddCard.value);
   closePopup(sectionPopupAddCard);
 })
+
+buttonExitPopupImage.addEventListener('click', () => closePopup(sectionPopupImage));
