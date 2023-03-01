@@ -4,14 +4,15 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 16.94px;
-  margin-bottom: 30px;
+  /* margin-bottom: 12px; */
   outline: none;
   border: none;
   border-bottom: 1px solid rgb(0, 0, 0, .5);
+  box-sizing: border-box;
 }
 
 .popup__input:focus {
   /* outline: none; */
   /* border: none; */
-  border-bottom: 2px solid #000;
+  /* border-bottom: 2px solid #000; */
 }

@@ -69,18 +69,28 @@
     </template>
 
     <article class="popup popup_type_edit_profile">
-      <form class="popup__form" action="">
+      <form name="" class="popup__form" novalidate>
         <h2 class="popup__title">Редактировать профиль</h2>
         <input
+          id="name-input"
           class="popup__input popup__input_type_name"
           placeholder="name"
           type="text"
+          minlength="2"
+          maxlength="40"
+          required
         />
+        <span class="popup__input-error name-input-error"></span>
         <input
+          id="profession-input"
           class="popup__input popup__input_type_profession"
           placeholder="professiln"
           type="text"
+          minlength="2"
+          maxlength="200"
+          required
         />
+        <span class="popup__input-error profession-input-error"></span>
         <button
           class="popup__button-submit popup_button-submit_type_edit-profile"
           type="submit"
@@ -94,17 +104,21 @@
     </article>
 
     <article class="popup popup_type_add_card">
-      <form class="popup__form" action="">
+      <form class="popup__form" novalidate>
         <h2 class="popup__title">Новое место</h2>
         <input
           class="popup__input popup__input_type_name-card"
           placeholder="Название"
           type="text"
+          minlength="2"
+          maxlength="30"
+          required
         />
         <input
           class="popup__input popup__input_type_address-card"
           placeholder="Ссылка на картинку"
-          type="text"
+          type="url"
+          required
         />
         <button
           class="popup__button-submit popup_button-submit_type_add-card"
@@ -125,5 +139,6 @@
     </article>
 
     <script src="./components/index.js"></script>
+    <script src="./components/validate.js"></script>
   </body>
 </html>
