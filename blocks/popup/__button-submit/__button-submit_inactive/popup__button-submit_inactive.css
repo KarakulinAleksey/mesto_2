@@ -1,0 +1,5 @@
+.popup__button-submit_inactive {
+  background-color: #b9b4b4;
+  color: #494949;
+  cursor: default;
+}

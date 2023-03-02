@@ -34,6 +34,7 @@ let nameLabelSectionProfile = sectionProfile.querySelector('.profile__label-name
 let professionLabelSectionProfile = sectionProfile.querySelector('.profile__label-profession');
 
 const sectionPopupEditProfile = document.querySelector('.popup_type_edit_profile');
+const formPopupEditProfile = document.querySelector('.popup__form');
 const inputNamePopupEditProfile = sectionPopupEditProfile.querySelector('.popup__input_type_name');
 const inputProfessionPopupEditProfile = sectionPopupEditProfile.querySelector('.popup__input_type_profession');
 const buttonSubmitPopupEditProfile = sectionPopupEditProfile.querySelector('.popup_button-submit_type_edit-profile');
@@ -92,10 +93,12 @@ initialCards.forEach((item)=>{
 
 function closePopup(elementPopup){
  elementPopup.classList.remove('popup_opened');
+ document.removeEventListener('keydown', handleESC);
 }
 
 function openPopup(elementPopup){
   elementPopup.classList.add('popup_opened');
+  document.addEventListener('keydown', handleESC);
 }
 
 function handleFormSubmit(evt){
@@ -126,3 +129,32 @@ buttonSubmitPopupAddCard.addEventListener('click', (evt) => {
 })
 
 buttonExitPopupImage.addEventListener('click', () => closePopup(sectionPopupImage));
+
+//----------------функция закрытия попапа при нажатии на esc-------\\
+
+function handleESC(evt) {
+  if (evt.key === 'Escape') {
+    closePopup(document.querySelector('.popup_opened'));
+  };
+}
+
+//----------------функция закрытия попапа при нажатии за пределами формы попапа-------\\
+
+function setClosePopupEventListener(popup, formPopup){
+  popup.addEventListener('click', function(evt){   //закрытие попапа при клике за пределами формы
+    const evtTarget = evt.target;
+    if (!formPopup.contains(evtTarget)){
+      closePopup(popup);
+    }
+  });
+}
+
+
+// setClosePopupEventListener(sectionPopupEditProfile, formPopupEditProfile);
+//вешаем обработчики для закрытия попапов при клике вне формы(не сработает для popup_type_image)
+const formList = Array.from(document.querySelectorAll('.popup'));
+console.log('formList', formList);
+formList.forEach((popupElement)=>{
+  const popupForm = popupElement.querySelector('.popup__form');
+  setClosePopupEventListener(popupElement, popupForm);
+})

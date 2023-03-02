@@ -13,3 +13,9 @@
   opacity: 0.8;
   cursor: pointer;
 }
+
+.popup__button-submit:disabled {
+  background-color: #b9b4b4;
+  color: #494949;
+  cursor: default;
+}

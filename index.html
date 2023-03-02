@@ -107,6 +107,7 @@
       <form class="popup__form" novalidate>
         <h2 class="popup__title">Новое место</h2>
         <input
+          id = "nameCard-input"
           class="popup__input popup__input_type_name-card"
           placeholder="Название"
           type="text"
@@ -114,12 +115,15 @@
           maxlength="30"
           required
         />
+        <span class="popup__input-error nameCard-input-error"></span>
         <input
+          id = "adressCard-input"
           class="popup__input popup__input_type_address-card"
           placeholder="Ссылка на картинку"
           type="url"
           required
         />
+        <span class="popup__input-error adressCard-input-error"></span>
         <button
           class="popup__button-submit popup_button-submit_type_add-card"
           type="submit"
