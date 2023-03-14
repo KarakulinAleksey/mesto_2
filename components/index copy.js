@@ -45,7 +45,6 @@ const inputNameCardPopupAddCard = sectionPopupAddCard.querySelector('.popup__inp
 const inputAddressCardPopupAddCard = sectionPopupAddCard.querySelector('.popup__input_type_address-card');
 const buttonSubmitPopupAddCard = sectionPopupAddCard.querySelector('.popup_button-submit_type_add-card');
 const buttonExitPopupAddCard = sectionPopupAddCard.querySelector('.popup_button-exit_type_add-card');
-
 const sectionPopupImage = document.querySelector('.popup_type_image');
 const popupImageImageBlock = sectionPopupImage.querySelector('.popup__image');
 const popupImageTitle = sectionPopupImage.querySelector('.popup__image-title');
